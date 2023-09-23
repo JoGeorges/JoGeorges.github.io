@@ -1,0 +1,424 @@
+<!Doctype html>
+<html lang="en">
+  <head>      
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code9Class</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="icon" href="ig.png" type="image/png">
+  <style>
+      // Functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Variable overrides second
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Required Bootstrap imporats
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+main {
+ 
+  height: -webkit-fill-available;
+  max-height: 100vh;    
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scrollarea {
+  overflow-y: auto;
+}
+.image-text-container {
+  display: flex; 
+  align-items: center; 
+}
+.image {
+  margin-left: 5px;
+}
+
+  </style>
+  </head>
+  <body style="font-family: 'Poppins', sans-serif; background-color: #EEEEEE;">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="bootstrap" viewBox="0 0 118 94">
+    <title>Instagram</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" width="22" height="22" role="img" aria-label="Home"></svg>
+  </symbol>
+</svg>
+
+<main class="d-flex flex-nowrap">    
+
+ <div class="d-flex flex-column flex-shrink-0" style="width: 5rem; background-color: #D8D9DA; padding-bottom: 30px;">
+  <a href="/" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-placement="right">
+  <svg class="bi pe-none" width="40" height="32"><use xlink:href="#bootstrap"/></svg>        
+  </a>
+   <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+        
+  <li class="nav-item" style="margin-top: 50px;">
+   <a href="home.html" class="nav-link py-3 border-bottom rounded-0" aria-current="page" title="home">
+   <img src="home.png" alt="home">
+   </a>
+  </li>
+  <li>
+   <a href="search.html" class="nav-link py-3 border-bottom rounded-0" aria-current="page" title="search">
+   <img src="loupe.png" alt="search">
+   </a>
+  </li>
+  <li>
+   <a href="inbox.html" class="nav-link py-3 border-bottom rounded-0" aria-current="page" title="inbox" >
+   <img src="messenger.png" alt="inbox">
+   </a>
+  </li>
+  <li>
+  </ul>
+  
+    <div class="dropdown border-top">
+      <a class="d-flex align-items-center mb-100 justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="code9.png" alt="mdo" style="width: 30px; height: 30px;" class="rounded-circle">
+      </a>
+      <ul class="dropdown-menu text-small shadow">
+        <li style="font-weight: bold; font-size: 13px; margin-left: 13px;"<a class="dropdown-item" href="settings.html"><i>Settings</i></a></li>
+         <li style="font-weight: bold; font-size: 13px; margin-left: 13px;"<a class="dropdown-item" href="profile.html"><i>Profile</i></a></li>
+        <li><hr class="dropdown-divider"></li>
+          <li style="font-weight: bold; font-size: 13px; margin-left: 13px;"<a class="dropdown-item" href="#"><i>Sign out</i></a></li>
+      </ul>
+    </div>
+  </div>
+    
+  <div class="d-flex flex-column align-items-stretch flex-shrink-0" style="width: 80%; background-color: #EEEEEE;">
+    <div class="d-flex align-items-center flex-shrink-0 p-2 link-body-emphasis  border-bottom pb-3 pt-4" style="background-color: #EEEEEE;;">
+      
+  <img class="rounded-circle" style="width: 50px; margin-left: 25%; margin-right: 30px;" src="messi.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal1" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="messi.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>leomessi</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="messi2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à leomessi..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="james.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal2" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="james.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>kingjames</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="james2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à kingjames..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="rock.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal3" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal3" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="rock.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>therock</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="rock2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à therock..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="biden.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal4" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal4" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="messi.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>joebiden</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="biden2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à joebiden..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="beyonce.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal5" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="beyonce.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>beyonce</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="beyonce2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à beyonce..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="misty.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal6" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal6" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="misty.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>mistyonpointe</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="misty2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à mistyonpointe..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <img class="rounded-circle" style="width: 50px; margin-right: 30px;" src="bolt.jpg" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal7" data-bs-whatever="@mdo">
+  <div class="modal fade" id="exampleModal7" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content" style="background-color: #DDE6ED; width: 335px;">
+  <div class="modal-header" style="padding: 2px;">            
+  <button type="button" class="btn-close me-2" style="margin-top: 5px;"data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body" style="padding-top: 2px;">        
+    
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-right: 0;" src="bolt.jpg">
+ <p style="margin-left: 5px; margin-bottom: 2px; font-size: 13px;"><b>usainbolt</b></p>
+ <img class="image" src="checked.png">
+  </div>
+ <img src="bolt2.jpg" style="width: 300px; height: 400px; margin-top: 10px; border-radius: 5px;" alt="">
+ <input style="margin-top: 10px; font-size: 12px; border-radius: 25px; border: solid 1px; width: 255px; margin-right: 5px;"type="text" id="comment" name="comment" placeholder="Répondre à usainbolt..."/><img style="margin-right: 5px;"src="l2.png" alt=""><img src="s2.png" alt="">
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ </div>    
+    
+  <div class="list-group list-group-flush border-bottom scrollarea" style="width: 900px;">    
+    
+ <p style="margin-left: 10%; margin-bottom: 2px; margin-top: 20px; font-size: 30px;"><b>Rechercher</b></p>
+ <input style="margin-top: 0; font-size: 12px; border-radius: 25px; border: solid 1px; width: 300px; margin-left: 10%;margin-right: 5px;"type="search" id="comment" name="comment" placeholder="Rechercher"/>
+ <p style="margin-left: 10%; margin-bottom: 10px; margin-top: 10px; font-size: 20px;"><b>Récents</b></p>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="messi.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>leomessi</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">488 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="xavi.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>xavi</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">11.5 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="james.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>kingjames</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">631 K d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="rock.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>therock</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">390 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="biden.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>joebiden</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">17.4 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="beyonce.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>beyonce</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">317 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="misty.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>mistyonpointe</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">1.8 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="bolt.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>usainbolt</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">13.5 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="liga.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>liga</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">46.5 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="ht.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>haitisaveur</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">87.5 K d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="dach.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>dachca</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">11.7 M d'abonnés</p>
+</div>
+
+<div class="alert alert-dismissible fade show" style="padding: 5px; background-color: #EEEEEE; width: 400px; margin-bottom: 0; margin-left: 10%; padding-bottom: 0;" role="alert">
+  <div class="image-text-container">
+ <img class="rounded-circle" style="width: 30px; margin-left: 5px; margin-bottom: 0;" src="pic.jpg">
+ <p style="margin-left: 5px; margin-bottom: 0; font-size: 13px;"><b>picpro</b></p>
+ <img class="image" src="checked.png"  
+  </div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<p style="margin-left: 40px; margin-top: 0; margin-bottom: 0; padding: 0; padding-bottom : 0; font-size: 11px;">3.9 M d'abonnés</p>
+</div>
+  </br>
+  </br>       
+  </div>
+  </div>     
+</main>
+
+<div class="container" style="padding-bottom: 10px;">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center fixed-bottom" style="height: 40px; font-family: 'Poppins'; background-color: #D8D9DA; padding-bottom: 10px;">
+  <div class="col-md-4 d-flex align-items-center" style="padding-bottom: 10px;">
+  <p style="font-weight: bold; font-size: 15px; padding-top: 10px; padding-left: 10px;">&copy; 2023 Jonathan.co</p>
+ </div>
+ 
+ <ul class="nav col-md-4 justify-content-end list-unstyled d-flex" style="padding-bottom: 20px; padding-right: 10px;">
+   <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" target="_blank"><img src="twitter2.png" alt="icon"></img></a></li>
+   <li class="ms-3"><a class="text-body-secondary" href="" target="_blank"><img src="instagram2.png" alt="icon"></img></a></li>
+   <li class="ms-3"><a class="text-body-secondary" href="https://web.facebook.com/?_rdc=1&_rdr&wtsid=rdr_0Gf8QNmrWsHRUqFjP" target="_blank"><img src="facebook2.png" alt="icon"></img></a></li>
+ </ul>
+  </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>  
+
+  </body>
+</html>
